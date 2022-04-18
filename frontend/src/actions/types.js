@@ -1,0 +1,5 @@
+export const CREATE_BLOG = 'CREATE_BLOG'
+export const FETCH_BLOGS = 'FETCH_BLOGS'
+export const UPDATE_BLOGS = 'UPDATE_BLOGS'
+export const DELETE_BLOGS = 'DELETE_BLOGS'
+export const DELETE_ALL_BLOGS = 'DELETE_ALL_BLOGS'
