@@ -20,7 +20,7 @@ function blogReducer(blogs = initialState, action) {
 
     case UPDATE_BLOGS:
       return blogs.map((blog) => {
-        if (blog.id == payload.id) {
+        if (blog.id === payload.id) {
           return {
             ...blog,
             ...payload,

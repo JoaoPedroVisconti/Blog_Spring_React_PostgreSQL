@@ -14,7 +14,7 @@ class BlogDataService {
   }
 
   update(id, data) {
-    return http.put('/blogs/${id}', data)
+    return http.put(`/blogs/${id}`, data)
   }
 
   delete(id) {
