@@ -34,10 +34,6 @@ public class BlogModel {
     return this.id;
   }
 
-  public void setId(long id) {
-    this.id = id;
-  }
-
   public String getTitle() {
     return this.title;
   }
@@ -60,6 +56,11 @@ public class BlogModel {
 
   public void setPublished(boolean published) {
     this.published = published;
+  }
+
+  @Override
+  public String toString(){
+    return "Tutorial [id=" + id + ", title=" + title + ", desc=" + description + ", published=" + published + "]";
   }
   
 }

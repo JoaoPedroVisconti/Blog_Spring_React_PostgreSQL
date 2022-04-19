@@ -28,6 +28,7 @@ public class BlogService {
       if(title == null)
         blogRepository.findAll().forEach(blogs::add);
       else
+        System.out.println(title);
         blogRepository.findByTitleContaining(title).forEach(blogs::add);
       
         if(blogs.isEmpty()) {
@@ -36,6 +37,8 @@ public class BlogService {
 
         return new ResponseEntity<>(blogs, HttpStatus.OK);
     } catch (Exception e) {
+      System.out.println("Error in line 40");
+      System.out.println(e);
       return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
