@@ -5,8 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 
 import BlogList from './components/BlogList'
-import Blog from './components/Blog'
+// import Blog from './components/Blog'
 import AddBlog from './components/AddBlog'
+import WrappedComponent from './components/WrappedComponent'
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
           <Route exact path='/' element={<BlogList />} />
           <Route exact path='/blogs' element={<BlogList />} />
           <Route exact path='/add' element={<AddBlog />} />
-          <Route exact path='/blogs/:id' element={<Blog />} />
+          <Route exact path='/blogs/:id' element={<WrappedComponent />} />
         </Routes>
       </div>
     </BrowserRouter>
