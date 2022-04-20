@@ -29,7 +29,7 @@ export const fetchBlogs = () => async (dispatch) => {
   try {
     const res = await BlogDataService.getAll()
 
-    console.log(res.data)
+    // console.log(res.data)
 
     dispatch({
       type: FETCH_BLOGS,

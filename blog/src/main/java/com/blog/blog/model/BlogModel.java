@@ -59,8 +59,8 @@ public class BlogModel {
   }
 
   @Override
-  public String toString(){
-    return "Tutorial [id=" + id + ", title=" + title + ", desc=" + description + ", published=" + published + "]";
-  }
+	public String toString() {
+		return "BlogModel [id=" + id + ", title=" + title + ", desc=" + description + ", published=" + published + "]";
+	}
   
 }

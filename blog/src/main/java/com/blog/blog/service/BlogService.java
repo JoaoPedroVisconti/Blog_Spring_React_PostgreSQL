@@ -22,22 +22,25 @@ public class BlogService {
   }
 
   public ResponseEntity<List<BlogModel>> getAllBlogs(String title) {
+    
     try {
       List<BlogModel> blogs = new ArrayList<BlogModel>();
-
-      if(title == null)
+      
+      if (title == null) {
         blogRepository.findAll().forEach(blogs::add);
-      else
+      
+      } else {
         System.out.println(title);
         blogRepository.findByTitleContaining(title).forEach(blogs::add);
+        System.out.println(blogs);
+      }
       
-        if(blogs.isEmpty()) {
-          return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
-
-        return new ResponseEntity<>(blogs, HttpStatus.OK);
+        if (blogs.isEmpty()) {
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+      }
+      
+      return new ResponseEntity<>(blogs, HttpStatus.OK);
     } catch (Exception e) {
-      System.out.println("Error in line 40");
       System.out.println(e);
       return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
     }
